@@ -1,0 +1,14 @@
+.main-form__submit {
+    background: #23C967;
+    border: 1px solid #23C967;
+    border-radius: 15px;
+    min-height: 45px;
+    width: 370px;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+}

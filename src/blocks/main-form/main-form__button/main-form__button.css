@@ -1,0 +1,8 @@
+.main-form__button{
+    width: 13px;
+    height: 13px;
+    border: none;
+    cursor: pointer;
+    background: url(../../../img/add.png);
+    margin-left: 5px;
+}

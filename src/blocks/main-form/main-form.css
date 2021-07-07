@@ -1,0 +1,17 @@
+@import url('./main-form__title/main-form__title.css');
+@import url('./main-form__text/main-form__text.css');
+@import url('./main-form__input/main-form__input.css');
+@import url('./main-form__green/main-form__green.css');
+@import url('./main-form__button/main-form__button.css');
+@import url('./main-forn__box/main-form__box.css');
+@import url('./main-form__submit/main-form__submit.css');
+.main-form{
+background: #FFFFFF;
+box-shadow: 10px 10px 60px #E2E7FF;
+border-radius: 0px 50px 50px 50px;
+display: flex;
+flex-direction: column;
+max-width: 440px;
+margin: 100px auto;
+justify-content: center;
+}
