@@ -1,0 +1,5 @@
+@import url('./special/normalize.css');
+@import url('./blocks/main-form/main-form.css');
+body{
+    background: #F4F5FA;
+}
