@@ -1,0 +1,6 @@
+.radio-form__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12px;
+}

@@ -1,0 +1,24 @@
+@import url('./radio-form__box/radio-form__box.css');
+@import url('./radio-form__container/radio-form__container.css');
+@import url('./radio-form__title/radio-form__title.css');
+@import url('./radio-form__text/radio-form__text.css');
+@import url('./radio-form__radio/radio-form__radio.css');
+@keyframes rotation {
+    from {
+        transform: translate(0,-240px);
+        
+    }
+    to {
+        transform: translate(0,240px);
+        
+    }
+    
+} 
+.radio-form{
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid #DDDFED;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin-bottom: 23px;
+}

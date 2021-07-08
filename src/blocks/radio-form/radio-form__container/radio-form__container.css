@@ -1,0 +1,10 @@
+.radio-form__container{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1.5px solid #DDDFED;
+    align-items: center;
+    justify-content: center;
+}
+.radio-form__container:last-of-type{
+    border: none;
+}

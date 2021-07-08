@@ -8,18 +8,78 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <form action="" class="main-form">
-        <div style="margin: 0 35px;">
+    <div class="main-form">
+        <div style="margin:  35px;">
         <p class="main-form__title">Info</p>
         <p class="main-form__text">Enter your email address</p>
-        <input type="text" placeholder="Form" class="main-form__input">
+        <input type="text" placeholder="team@checkforpatent.com" class="main-form__input">
+        <p class="main-form__title">Product 1</p>
+        <p class="main-form__text">Enter main keyword for the product</p>
+        <input type="text" placeholder="for example, sylicon wine cup" class="main-form__input">
+        <p class="main-form__text">Enter link to the similar product as a reference</p>
+        <input type="text" placeholder="https://..." class="main-form__input">
         <div class="main-form__box">
             <p class="main-form__green">Add more products</p> 
-            <button class="main-form__button"></button>
+            <button class="main-form__button" onclick="(e) => {e.preventDefault()}"></button>
         </div>
         <p class="main-form__text">We offer discount up to 36% for multiple checks</p>
         <button class="main-form__submit">Submit and Pay 24.99 USD</button>
+        <div class="main-form__container">
+            <img src="./img/zamok.png" class="main-form__img" alt="img">
+            <p class="main-form__secure">Secure payment with Stripe</p>
         </div>
-    </form>
+    </div>
+    
+    </div>
+    <div class="main-form hide">
+        <div style="margin: 35px;">
+        <p class="main-form__title">Adding more products</p>
+        <p class="main-form__text">The more items you check, the better the price.</p>
+        <div class="radio-form">
+        <div class="radio-form__container" onclick="new Price(this).isChecked()">
+            <input type="radio" id="1"  class="radio-form__radio" value="80" >
+            <div class="forRadioButton"></div>
+            <div class="radio-form__box">
+            <p class="radio-form__title">5 products for 80 usd / 16$ for each</p>
+           <label for="1" class="radio-form__text">You safe 36% on each patent check</label>
+            </div>
+        </div>
+        <div class="radio-form__container" onclick="new Price(this).isChecked()">
+            <input type="radio" id="2"  class="radio-form__radio" value="72">
+            <div class="forRadioButton"></div>
+            <div class="radio-form__box">
+            <p class="radio-form__title">4 products for 72 usd / 18$ for each</p>
+           <label for="2" class="radio-form__text">You safe 28% on each patent check</label>
+            </div>
+        </div>
+        <div class="radio-form__container" onclick="new Price(this).isChecked()">
+            <input type="radio" id="3"  class="radio-form__radio" value="60" >
+            <div class="forRadioButton"></div>
+            <div class="radio-form__box">
+            <p class="radio-form__title">3 products for 60 usd / 20$ for each</p>
+           <label for="3" class="radio-form__text">You safe 20% on each patent check</label>
+            </div>
+        </div>
+        <div class="radio-form__container" onclick="new Price(this).isChecked()">
+            <input type="radio" id="4"  class="radio-form__radio" value="44">
+            <div class="forRadioButton"></div>
+            <div class="radio-form__box">
+            <p class="radio-form__title">2 products for 44 usd / 22$ for each</p>
+           <label for="4" class="radio-form__text">You safe 12% on each patent check</label>
+            </div>
+        </div>
+        <div class="radio-form__container" onclick="new Price(this).isChecked()">
+            <input type="radio" id="5"  class="radio-form__radio" value="24.99" >
+            <div class="forRadioButton"></div>
+            <div class="radio-form__box">
+            <p class="radio-form__title">1 product for 24.99 usd</p>
+            <label for="4" class="radio-form__text"></label>
+            </div>
+        </div>
+        </div>
+        <button class="main-form__submit">Continue</button>
+    </div>
+</div>
+    <script src="./index.js"></script>
 </body>
 </html>
