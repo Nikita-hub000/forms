@@ -5,6 +5,20 @@
 @import url('./main-form__button/main-form__button.css');
 @import url('./main-forn__box/main-form__box.css');
 @import url('./main-form__submit/main-form__submit.css');
+@import url('./main-form__secure/main-form__secure.css');
+@import url('./main-form__img/main-form__img.css');
+@import url('./main-form__container/main-form__container.css');
+@keyframes rotation {
+    from {
+        transform: translate(0,0);
+        
+    }
+    to {
+        transform: translate(240px,0);
+        
+    }
+    
+} 
 .main-form{
 background: #FFFFFF;
 box-shadow: 10px 10px 60px #E2E7FF;
@@ -14,4 +28,13 @@ flex-direction: column;
 max-width: 440px;
 margin: 100px auto;
 justify-content: center;
+
+}
+
+
+.hide{
+    display: none;
+}
+.anim{
+    animation: rotation 1s;
 }

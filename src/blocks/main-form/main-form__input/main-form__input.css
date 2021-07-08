@@ -5,13 +5,12 @@ font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 19px;
-max-width: 370px;
+width: 100%;
 border: none;
 border-bottom:1.5px solid #E1E3EE;
 color: #D0D3E2;
 outline: none;
 margin-bottom: 25px;
-margin-top: 12px;
 }
 
 .main-form__input::placeholder{

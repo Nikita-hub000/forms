@@ -1,0 +1,12 @@
+.radio-form__text{
+    font-family: "Gilroy";
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 16px;
+margin-top: 5px;
+color: #A7A2CB;
+}
+.radio-form__text_active{
+    color:  #23C967;
+}
