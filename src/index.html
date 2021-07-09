@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div class="main-form">
-        <div style="margin:  35px;">
+    <section class="main-form">
+        <div class="main-form__root">
         <p class="main-form__title">Info</p>
         <p class="main-form__text">Enter your email address</p>
         <input type="text" placeholder="team@checkforpatent.com" class="main-form__input">
@@ -23,16 +23,19 @@
             <button class="main-form__button" onclick="(e) => {e.preventDefault()}"></button>
         </div>
         <p class="main-form__text">We offer discount up to 36% for multiple checks</p>
-        <button class="main-form__submit">Submit and Pay 24.99 USD</button>
+        <button class="main-form__submit main-form__submit_green">
+            Submit and Pay 24.99 USD
+            <div class="preloader"><i class="preloader__circle"></i></div>
+        </button>
         <div class="main-form__container">
             <img src="./img/zamok.png" class="main-form__img" alt="img">
             <p class="main-form__secure">Secure payment with Stripe</p>
         </div>
     </div>
-    
-    </div>
-    <div class="main-form hide">
-        <div style="margin: 35px;">
+  
+</section>
+    <section class="main-form hide">
+        <div class="main-form__root">
         <p class="main-form__title">Adding more products</p>
         <p class="main-form__text">The more items you check, the better the price.</p>
         <div class="radio-form">
@@ -77,9 +80,31 @@
             </div>
         </div>
         </div>
-        <button class="main-form__submit">Continue</button>
+        <button class="main-form__submit main-form__submit_green" onclick="new Price(this).continue()">Continue</button>
     </div>
-</div>
+</section>
+<section class="main-form hide">
+    <div class="main-form__root">
+        <p class="main-form__title">Successfull payment</p>
+        <p class="main-form__text">Your request has been accepted and will be processed within 24 working hours. We will send you a payment details and all information to your email.</p>
+        <div class="main-form__card-box">
+        <img src="./img/succes.png" alt="card" class="main-form__card">
+        </div>
+        <button class="main-form__submit main-form__submit_green">Back</button>
+    </div>
+</section>
+
+<section class="main-form hide">
+    <div class="main-form__root">
+        <p class="main-form__title">Your payment failed</p>
+        <p class="main-form__text">Sorry, but we’ve having trouble processing your payment. You have been not charged for this transaction.</p>
+        <div class="main-form__card-box">
+        <img src="./img/error.png" alt="card" class="main-form__card_error">
+        </div>
+        <button class="main-form__submit main-form__submit_red">Try to pay again</button>
+    </div>
+</section>
+
     <script src="./index.js"></script>
 </body>
 </html>

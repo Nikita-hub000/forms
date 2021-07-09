@@ -1,6 +1,7 @@
 @import url('./special/normalize.css');
 @import url('./blocks/main-form/main-form.css');
 @import url('./blocks/radio-form/radio-form.css');
+@import url('./blocks/preloader/preloader.css');
 body{
     background: #F4F5FA;
 }

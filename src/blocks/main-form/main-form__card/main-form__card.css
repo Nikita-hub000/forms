@@ -1,0 +1,7 @@
+@import url('./main-form__card_error/main-form__card_error.css');
+.main-form__card{
+    justify-content: center;
+    align-items: center;
+    width: 157px;
+    height: 122px;
+}
