@@ -1,0 +1,16 @@
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.preloader__circle{
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 3px solid #F4F5FA;
+        border-bottom-color: #23C967;
+        color: #F4F5FA;
+        background: #23C967;
+        border-radius: 100px;
+        animation: spin .75s infinite linear;
+}

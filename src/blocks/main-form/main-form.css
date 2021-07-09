@@ -8,6 +8,9 @@
 @import url('./main-form__secure/main-form__secure.css');
 @import url('./main-form__img/main-form__img.css');
 @import url('./main-form__container/main-form__container.css');
+@import url('./main-form__card/main-form__card.css');
+@import url('./main-form__card-box/main-form__card-box.css');
+@import url('./main-form__root/main-form__root.css');
 @keyframes rotation {
     from {
         transform: translate(0,0);
@@ -36,5 +39,5 @@ justify-content: center;
     display: none;
 }
 .anim{
-    animation: rotation 1s;
+    animation: rotation 0.1s;
 }
