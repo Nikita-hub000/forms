@@ -10,19 +10,22 @@
 <body>
     <section class="main-form">
         <div class="main-form__root">
-        <p class="main-form__title">Info</p>
+        <p class="main-form__title" aria-valuenow="0">Info</p>
         <p class="main-form__text">Enter your email address</p>
         <input type="text" placeholder="team@checkforpatent.com" class="main-form__input">
-        <p class="main-form__title">Product 1</p>
+        <div class="main-form__id">
+        <p class="main-form__title" aria-valuenow="24.99">Product 1</p>
         <p class="main-form__text">Enter main keyword for the product</p>
         <input type="text" placeholder="for example, sylicon wine cup" class="main-form__input">
         <p class="main-form__text">Enter link to the similar product as a reference</p>
         <input type="text" placeholder="https://..." class="main-form__input">
+        </div>
         <div class="main-form__box">
             <p class="main-form__green">Add more products</p> 
             <button class="main-form__button" onclick="(e) => {e.preventDefault()}"></button>
         </div>
         <p class="main-form__text">We offer discount up to 36% for multiple checks</p>
+    </div>
         <button class="main-form__submit main-form__submit_green">
             Submit and Pay 24.99 USD
             <div class="preloader"><i class="preloader__circle"></i></div>
@@ -31,7 +34,7 @@
             <img src="./img/zamok.png" class="main-form__img" alt="img">
             <p class="main-form__secure">Secure payment with Stripe</p>
         </div>
-    </div>
+    
   
 </section>
     <section class="main-form hide">

@@ -27,13 +27,25 @@ class Price {
 
     this.el.querySelector(".radio-form__text").style.color = "#23C967";
   }
-  continue() {
-
-    function render(i) {
+  deleteCard(prod){
+    this.prod = prod
+    document.querySelectorAll(".main-form__root")[0].removeChild(this.prod)
+    this.sum()
+  }
+  render(val){
+      this.val = val
       const root = document.querySelectorAll(".main-form__root")[0];
+      const div = document.createElement('div')
+      div.classList.add('main-form__id')
+      const first = root.firstChild 
       const product = document.createElement("p");
       product.classList.add("main-form__title");
-      product.textContent = `Product ${i+1}`;
+      product.ariaValueNow = this.val
+      product.textContent = `Product ${++indexCount}`;
+      const btn = document.createElement('button')
+      btn.classList.add('main-form__cancel')
+      btn.onclick = (e) => {e.preventDefault(); this.deleteCard(div)}
+      product.appendChild(btn)
       const keyword = document.createElement("p");
       keyword.classList.add("main-form__text");
       keyword.textContent = "Enter main keyword for the product";
@@ -48,46 +60,59 @@ class Price {
       http.placeholder = "https://...";
       http.type = "text";
       http.classList.add("main-form__input");
-      root.appendChild(product);
-      root.appendChild(keyword);
-      root.appendChild(example);
-      root.appendChild(link);
-      root.appendChild(http);
-    }
-
+      div.appendChild(product)
+      div.appendChild(keyword)
+      div.appendChild(example)
+      div.appendChild(link)
+      div.appendChild(http)
+      root.insertBefore(div, first)
+      
+    
+  }
+  continue() {
     let arr = Array.from(
       this.el.parentNode.querySelectorAll(".radio-form__radio")
     );
     arr.forEach((x, index) => {
-      console.log(x.checked);
 
       if (x.checked && index == 0) {
         for (let i = 0; i < 5; i++) {
-          render(i)
+       
+          this.render(16)
         }
       }
       else if(x.checked && index == 1){
         for (let i = 0; i < 4; i++) {
-          render(i)
+       
+          this.render(18)
         }
       }
       else if(x.checked && index == 2){
         for (let i = 0; i < 3; i++) {
-          render(i)
+          
+          this.render(20)
         }
       }
       else if(x.checked && index == 3){
         for (let i = 0; i < 2; i++) {
-          render(i)
+        
+          this.render(22)
         }
       }
       else if(x.checked && index == 4){
-          render(1)
+          this.render(24.99)
       }
     });
+    this.sum()
+    
+  }
+  sum(){
+    let mas = Array.from(document.querySelectorAll('.main-form')[0].querySelectorAll('.main-form__title'))
+    let counter = 0
+    mas.forEach(x => counter+= parseInt(x.ariaValueNow))
+    document.querySelector('.main-form__submit').textContent = `Submit and pay ${counter} USD`
   }
 }
-
 class Transition {
   constructor(el, f, currentf, preloader) {
     this.el = el;
@@ -108,7 +133,9 @@ class Transition {
       e.preventDefault();
       let a = this.el.textContent;
       this.el.textContent = "";
+      document.querySelector('.main-form__submit').appendChild(this.preloader)
       this.preloader.style.display = "flex";
+      
 
       setTimeout(() => {
         this.currentf.classList.add("hide");
@@ -120,6 +147,7 @@ class Transition {
     });
   }
 }
+let indexCount = 1
 const button = document.querySelector(".main-form__button");
 const buttonSub = document.querySelectorAll(".main-form__submit")[0];
 const buttonBack = document.querySelectorAll(".main-form__submit")[2];
@@ -132,6 +160,7 @@ const formBack = document.querySelectorAll(".main-form")[2];
 const formTryAgain = document.querySelectorAll(".main-form")[3];
 const formNext = document.querySelectorAll(".main-form")[1];
 
+
 const transition = new Transition(button, form1, form2);
 const submit = new Transition(
   buttonSub,
@@ -142,8 +171,10 @@ const submit = new Transition(
 const back = new Transition(buttonBack, form2, formBack);
 const tryAgain = new Transition(buttonTryAgain, form2, formTryAgain);
 const next = new Transition(buttonNext, form2, formNext);
+
 transition.move();
 submit.submit();
 back.move();
 tryAgain.move();
 next.move();
+

@@ -1,3 +1,23 @@
 .main-form__root{
     margin: 35px;
+    padding-right: 20px;
+}
+.main-form__root:first-of-type{
+    max-height: 530px;
+}
+
+.main-form__root:first-of-type{
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1;
+}
+.main-form__root::-webkit-scrollbar{
+    width: 4px;
+    background-color: #E1E3EE;
+
+}
+
+.main-form__root::-webkit-scrollbar-thumb {
+    background-color: #23C967;
+    width: 4px;
 }
