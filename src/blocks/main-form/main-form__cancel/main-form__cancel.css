@@ -1,0 +1,8 @@
+.main-form__cancel{
+    width: 13px;
+    height: 13px;
+    border: none;
+    cursor: pointer;
+    background: url(../../../img/x.png);
+    margin-left: 5px;
+}

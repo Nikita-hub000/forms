@@ -11,6 +11,7 @@
 @import url('./main-form__card/main-form__card.css');
 @import url('./main-form__card-box/main-form__card-box.css');
 @import url('./main-form__root/main-form__root.css');
+@import url('./main-form__cancel/main-form__cancel.css');
 @keyframes rotation {
     from {
         transform: translate(0,0);
@@ -31,7 +32,7 @@ flex-direction: column;
 max-width: 440px;
 margin: 100px auto;
 justify-content: center;
-
+align-items: center;
 }
 
 

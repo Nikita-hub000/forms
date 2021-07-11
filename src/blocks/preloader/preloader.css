@@ -1,4 +1,4 @@
-@import url(./__circle/preloader__circle.css);
+@import url('./__circle/preloader__circle.css');
 .preloader{
     background: #23C967;
     display: none;
